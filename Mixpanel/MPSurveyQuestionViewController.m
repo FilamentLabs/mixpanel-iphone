@@ -79,8 +79,8 @@ typedef NS_ENUM(NSInteger, MPSurveyTableViewCellPosition) {
     CGSize constraintSize = CGSizeMake(promptWidth, CGFLOAT_MAX);
 
     // Lower prompt font size until it fits (or hits min of 9 points).
-    for (CGFloat size = 20; size >= 9; size--) {
-        font = [font fontWithSize:size];
+    for (NSInteger size = 20; size >= 9; size--) {
+        font = [font fontWithSize:(CGFloat)size];
         CGSize sizeToFit;
 
         // Use boundingRectWithSize for iOS 7 and above, sizeWithFont otherwise.
